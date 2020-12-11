@@ -1,0 +1,7 @@
+server:
+  port: 3333
+spring:  application:    name: STOCK-API-GATEWAY
+zuul:  prefix: /api
+  routes:    stock:
+      path: /stock/**
+      service-id: STOCK-CALC-API
